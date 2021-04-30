@@ -1,0 +1,67 @@
+<section class="hero is-info is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Agencia</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <!-- form-->
+        <form (ngSubmit)="submitForm()" #agencyForm="ngForm">
+            <div class="field">
+                <label class="label">Agencia</label>
+                <input type="text" name="agencia" class="input" [(ngModel)]="agency.agencia" #agenciaInput="ngModel" required>
+                <div class="help is-error" *ngIf="agenciaInput.invalid && agenciaInput.touched">
+                    This field is required
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Distrito</label>
+                <input type="text" name="distrito" class="input" #distritoInput="ngModel" [(ngModel)]="agency.distrito" required>
+                <div class="help is-error" *ngIf="distritoInput.invalid && distritoInput.touched">
+                    This field is required
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Provincia</label>
+                <input type="text" name="provincia" class="input" #provinciaInput="ngModel" [(ngModel)]="agency.provincia" required>
+                <div class="help is-error" *ngIf="provinciaInput.invalid && provinciaInput.touched">
+                    This field is required
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Departamento</label>
+                <input type="text" name="departamento" class="input" #departamentoInput="ngModel" [(ngModel)]="agency.departamento" required>
+                <div class="help is-error" *ngIf="departamentoInput.invalid && departamentoInput.touched">
+                    This field is required
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Dirección</label>
+                <input type="text" name="direccion" class="input" #direccionInput="ngModel" [(ngModel)]="agency.direccion" required>
+                <div class="help is-error" *ngIf="direccionInput.invalid && direccionInput.touched">
+                    This field is required
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Latitud</label>
+                <input type="number" name="latitud" class="input" #latitudInput="ngModel" [(ngModel)]="agency.lat" required>
+                <div class="help is-error" *ngIf="latitudInput.invalid && latitudInput.touched">
+                    This field is required
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Longitud</label>
+                <input type="number" name="longitud" class="input" #longitudInput="ngModel" [(ngModel)]="agency.lon" required>
+                <div class="help is-error" *ngIf="longitudInput.invalid && longitudInput.touched">
+                    This field is required
+                </div>
+            </div>
+            <button type="submit" class="button is-medium is-warning" [disabled]="agencyForm.invalid">
+                Actualizar
+            </button>
+        </form>
+    </div>
+</section>
