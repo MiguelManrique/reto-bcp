@@ -9,7 +9,7 @@
 <section class="section">
     <div class="container">
         <!-- form-->
-        <form (ngSubmit)="submitForm()" #agencyForm="ngForm">
+        <form (ngSubmit)="submitForm(agency)" #agencyForm="ngForm">
             <div class="field">
                 <label class="label">Agencia</label>
                 <input type="text" name="agencia" class="input" [(ngModel)]="agency.agencia" #agenciaInput="ngModel" required>
